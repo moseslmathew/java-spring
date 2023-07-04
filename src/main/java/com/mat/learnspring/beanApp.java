@@ -1,5 +1,6 @@
 package com.mat.learnspring;
 
+import com.mat.learnspring.cusotmer.profile;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
@@ -21,15 +22,6 @@ public class beanApp {
 
 		List<String> str= Arrays.stream(apc.getBeanDefinitionNames()).toList();
 		str.stream().filter(item->item.contains("App")).forEach(System.out::println);
-
-	}
-
-	@GetMapping("/get message")
-	public String sayHello(){
-		return "Hello";
-	}
-
-	record jsonString(String str){
 
 	}
 
