@@ -16,16 +16,4 @@ public class profileController {
     public List<profile> getProfile(){
         return List.of(new profile(11,"John","mathew","11-222-2222","11/11/2000","test@test.com",1112223333));
     }
-
-    @GetMapping("/default2")
-    public String getProfile2(){
-        profile pr= new profile(11,"John","mathew","11-222-2222","11/11/2000","test@test.com",1112223333);
-        return Arrays.stream(pr.getClass().getName().split("\\."))
-                .sorted().findFirst().toString()
-                .replace("Optional","")
-                .replaceAll("[\\[.*\\]$]","");
-//        return pr.toString().replace(pr.getClass().toString(),"");
-    }
-
-
 }
